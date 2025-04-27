@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" 
+        crossorigin="anonymous">
+        
+        <title>
+            OnRepeat
+        </title>
+
+        <style>
+            
+            body {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+            }
+            .fondo {
+                height: 55px;
+                background-color: black;
+                justify-content: space-between;
+                padding: 10px;
+                align-items: center;
+                color: white;
+                position: fixed; left: 0; right: 0; top: 0;
+                z-index: 1;
+            }
+            .onrpt {
+                display: inline-flex;
+                position: absolute; top: 5px; left: 15px;
+                align-items: center;
+            }
+            .white {
+               color: white;
+            }
+            .red {
+                color: red;
+            }
+
+            .search {
+                position: absolute; right: 60px; top: 15px;
+                text-decoration: none;
+                color: white;
+            }   
+            .menu {
+                position: absolute; right: 15px; top: 15px;
+                text-decoration: none;
+                color: white;
+            }
+            .all {
+                color: brown;
+                position: relative; top: 70px;
+                justify-content: center;
+                display: flex;
+            }
+            .intro {
+                font-family: Arial Narrow;
+                font-size: 20px;
+                justify-content: center;
+                display: flex;
+                text-align: center;
+                margin: 50px;
+            }
+
+            :root {
+                --fondo-blanco: white; 
+                --fondo-negro: black;
+                --hei: 200px;
+                --borde: 20px;
+                --opacidad: .0;
+                --sub-bwn: brown;
+                --size-sub: 40px;
+                --aling-sub: left;
+                --text-blck: black;
+                --text-white: white;
+                --text-tipo: Arial Narrow;
+                --alaing-text: justify;
+                --hover-opcty: 1;
+            }
+
+            .generos{
+                background-color: brown;
+                color: white;
+                height: 1150px;
+            }
+            .gnro {
+                font-size: 80px;
+                justify-content: center;
+                display: flex;
+                position: relative; top: 40px;
+                margin: auto;
+            }
+            .mes {
+                font-family: Arial Narrow;
+                font-size: 20px;
+                justify-content: center;
+                display: flex;
+                margin: auto;
+            }
+
+            
+            .pop {
+                background-color: var(--fondo-blanco);
+                height: var(--hei);
+                border-radius: var(--borde);
+                position: relative; top: 40px;                
+                opacity: var(--opacidad);
+                transition: all .5s ease-in-out;
+                align-items: center;
+            }
+            .pp {
+                color: var(--sub-bwn);
+                margin: 0px 15px;
+                font-size: var(--size-sub);
+                display: flex;
+                position: relative; top: 15px; 
+                text-align: var(--aling-sub);
+            }
+            .continua {
+                color: var(--text-blck);
+                font-family: var(--text-tipo);
+                margin: 0 15px;
+                text-align: var(--alaing-text);
+            }
+            .reggaeton {
+                background-color: var(--fondo-negro);
+                height: var(--hei);
+                border-radius: var(--borde);             
+                margin: 60px 0px 0px 0px;
+                opacity: var(--opacidad);
+                transition: all .5s ease-in-out;
+            }
+            .rgg {
+                color: var(--sub-bwn);
+                margin: 0px 15px;
+                font-size: var(--size-sub);
+                display: flex;
+                position: relative; top: 15px; 
+                text-align: var(--aling-sub);
+            }
+            .este {
+                color: var(--text-white);
+                font-family: var(--text-tipo);
+                display: flex;
+                margin: 0 15px;
+                text-align: var(--alaing-text);
+            }
+            .kpop {
+                background-color: var(--fondo-blanco);
+                height: var(--hei);
+                border-radius: var(--borde);               
+                margin: 20px 0px 0px 0px;
+                opacity: var(--opacidad);
+                transition: all .5s ease-in-out;
+            }
+            .k {
+                color: var(--sub-bwn);
+                margin: 0px 15px;
+                font-size: var(--size-sub);
+                display: flex;
+                position: relative; top: 15px; 
+                text-align: var(--aling-sub);
+            }
+            .sigue {
+                color: var(--text-blck);
+                font-family: var(--text-tipo);
+                display: flex;
+                margin: 0 15px;
+                text-align: var(--alaing-text);
+            }
+            .electronica {
+                background-color: var(--fondo-negro);
+                height: var(--hei);
+                border-radius: var(--borde);             
+                margin: 20px 0px 0px 0px;
+                opacity: var(--opacidad);
+                transition: all .5s ease-in-out;
+            }
+            .elec {
+                color: var(--sub-bwn);
+                margin: 0px 15px;
+                font-size: var(--size-sub);
+                display: flex;
+                position: relative; top: 15px; 
+                text-align: var(--aling-sub);
+            }
+            .popular {
+                color: var(--text-white);
+                font-family: var(--text-tipo);
+                display: flex;
+                margin: 0 15px;
+                text-align: var(--alaing-text);
+            }
+
+            .generos:hover .pop {
+                opacity: var(--hover-opcty);
+                transition: all .5s ease-in-out;
+            }
+            .generos:hover .reggaeton {
+                opacity: var(--hover-opcty);
+                transition: all .5s ease-in-out;
+            }
+            .generos:hover .kpop {
+                opacity: var(--hover-opcty);
+                transition: all .5s ease-in-out;
+            }
+            .generos:hover .electronica {
+                opacity: var(--hover-opcty);
+                transition: all .5s ease-in-out;
+            }
+
+            .artistas {
+                color: brown;
+                font-size: 40px;
+                position: relative; top: 30px;
+                justify-content: center;
+                display: flex;
+                margin: 0;
+            }
+            .escuchados {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+                justify-content: center;
+                display: flex;
+                text-align: center;
+                margin: 35px;
+            }
+            
+            .carousel-item img {
+                height: 600px;
+                object-fit: contain;
+            }
+            .subcar {
+                color: brown;
+                font-size: 30px;
+            }
+            .textcar {
+                font-size: 20px;
+                color: brown;
+            }
+            .rojo {
+                background-color: brown;
+                color: white;
+                height: 580px;
+            }
+            .form-control {
+                font-family: var(--text-tipo);
+            }
+            .form-label {
+                font-size: 25px;
+            }
+            .enviar {
+                letter-spacing: 1px;
+            }
+            .song {
+                font-family: var(--text-tipo);
+            }
+
+            
+        </style>
+
+    </head>
+
+    <body>
+        <section class="container">
+            <div class="fondo" class="row">
+                <div class="onrpt" class="col-10">
+                    <h1 class="white">On</h1> <h1 class="red">Repeat</h1>
+                </div>
+                <nav>
+                    <a href="" class="col-1">
+                        <div class="search">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </div>
+                    </a>
+                    <a href="" class="col-1">
+                        <div class="menu">
+                            <span class="material-symbols-outlined">
+                                menu
+                            </span>
+                        </div>
+                    </a>
+                </nav>
+                
+            </div>
+        </section>
+        
+
+        <div class="all">
+            <h1 class="on">All your favorite artists</h1>
+        </div>
+        <br><br>
+        <div class="intro">
+            <p>Encuentra las canciones y los géneros más escuchados, además de los artistas actuales 
+                y los nuevos lanzamientos de tus cantantes favoritos. Todo para que estés actualizado 
+                musicalmente.
+            </p>
+        </div>       
+
+        <section class="container mt-5">
+            <div class="row">
+                <div class="generos">
+                    <h1 class="gnro">GÉNEROS</h1>
+                    <br><br>
+                    <p class="mes">A continuación te mostramos los géneros más
+                         escuchados de este mes.
+                    </p>
+                    <div>
+                        <div class="pop" class="col-sm-6 col-lg-10">
+                            <h4 class="pp">POP</h4> <br>
+                            <p class="continua">Continúa siendo el género más popular a nivel mundial, 
+                                con artistas como Olivia Rodrigo, Taylor Swift y Bad 
+                                Bunny dominando las listas de éxitos.
+                            </p>
+                        </div>
+                        <div class="reggaeton" class="col-sm-6 col-lg-10">
+                            <h4 class="rgg">REGGAETÓN</h4> <br>
+                            <p class="este">Este género sigue en auge, con artistas 
+                                como Karol G, J Balvin y Ozuna liderando las 
+                                reproducciones en plataformas de streaming. El reggaetón 
+                                chileno y mexa están ganando popularidad rápidamente, con
+                                 exponentes como FloyyMenor y El Malilla.
+                            </p>
+                        </div>
+                        <div class="kpop" class="col-sm-6 col-lg-10">
+                            <h4 class="k">K-POP</h4> <br>
+                            <p class="sigue">El K-Pop sigue siendo un fenómeno global, con 
+                                grupos como NewJeans y Stray Kids incorporando influencias 
+                                electrónicas en su música.
+                            </p>
+                        </div>
+                        <div class="electronica" class="col-sm-6 col-lg-10">
+                            <h4 class="elec">ELECTRÓNICA</h4> <br>
+                            <p class="popular">Sigue siendo popular en festivales y clubes, 
+                                con DJ y productores explorando fusiones con otros géneros.
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+        
+       
+
+        <br><br>
+
+        <div>
+            <h2 class="artistas">Artistas Destacados</h2>
+        </div>
+        <br>
+        <div>
+            <p class="escuchados">A continuación te mostramos los artistas más escuchados de estos géneros</p>
+        </div>
+
+        <div>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="olivia.jpg" class="d-block w-100" alt="img1">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="subcar">Olivia Rodrigo</h5>
+                      <p class="textcar">Artista destacada del género pop</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="karol.jpg" class="d-block w-100" alt="img2">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="subcar">Karol G</h5>
+                      <p class="textcar">Artista destacada del género reggaeton</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="nwjns.jpg" class="d-block w-100" alt="img3">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="subcar">New Jeans</h5>
+                      <p class="textcar">Grupo destacado del género K-Pop</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="davidg.jpg" class="d-block w-100" alt="img4">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="subcar">David Guetta</h5>
+                      <p class="textcar">Artista destacado del género electrónica</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="rojo">
+            <br><br>
+            <form action="gmail.php" method="POST" class="container mt-4">
+            <div class="correo">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="name" name="nombre" placeholder="Su nombre" required>
+            </div>
+            <br>
+            <div class="correo">
+              <label for="email" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="email" name="correo" placeholder="email@dominio.com" required>
+            </div>
+            <br>
+            <div class="opinion">
+              <label for="opinion" class="form-label">¿Qué te pareció nuestra página?</label>
+              <textarea class="form-control" id="opinion" name="mensaje" rows="3" placeholder="Escribe tu opinion"></textarea required>
+            </div>
+            <br>
+
+            <button type="submit" class="enviar">Enviar</button>
+            </form>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
